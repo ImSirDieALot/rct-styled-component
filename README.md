@@ -28,3 +28,8 @@ const BasicTitle = styled.h1`
   + The value for the styled.<tag> is wrapped in back ticks - ` `. this is called tagged template literal.
   + In this required css is passed in. This is the general css properties we would use in a .css file
 
+##### Setting up themes
+1. But before we do that, let's just go over the set up one more time where we want to have a theme provider.
+2. Then we want to wrap our entire application in a theme provider, not looking for theme prop.
+3. And either you can just pass in the object directly or if you want to have multiple themes, then of course you set them separately, just like normally you would JavaScript object.
+4. So all the rules apply.You set up whichever properties you want.

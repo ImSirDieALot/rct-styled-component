@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
-import { colors } from '../utils/utils';
+import { colors, setupBorder } from '../utils/utils';
 const AlternateTitle = ({title, className}) => {
   return (
     <div className={className}>
       <h1>{title}</h1>
       <div className='underline'></div>
       <div className='colorsUtils'>This is my utils color</div>
+      <div className='customBorder'></div>
     </div>
   )
 }
@@ -36,6 +37,10 @@ const AlternateWrapper = styled(AlternateTitle)`
     color: ${colors.primary};
     margin: 0 auto;
   }
+
+  .customBorder{
+    border: ${setupBorder({ width:10, type:'solid', color:'purple' })}
+  } 
 `;
 
 export default AlternateWrapper

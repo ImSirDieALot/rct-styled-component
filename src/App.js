@@ -1,29 +1,24 @@
-import styled from 'styled-components';
-// import { BasicTitle } from './components/BasicTitle';
-// import { DefaultButton, DangerButton, HipsterButton } from './components/MyButtons';
-// import { Button } from '@material-ui/core';
-import ComplexTitle from './components/ComplexTitle';
-import AlternateWrapper from './components/AlternateTitle';
-import GlobalClass from './components/GlobalClass';
+import { useState } from 'react';
+import styled from 'styled-components/macro';
+import { HipsterButton } from './components/MyButtons'
 
+/** To have a button use href, we need to use `as='a'`, which represents a link 
+ * this comes with default styles of a, so add the specific styles in the button 
+*/
 function App() {
+
   return (
-    <div style={{padding:'2rem'}}>
-      <h2>More Complex Title</h2>
-      <ComplexTitle title="Complex Title Component"></ComplexTitle>
-      <AlternateWrapper title="My Alternate Title Component"></AlternateWrapper>
-      <GlobalClass title="My Global Class Component"></GlobalClass>
-    </div>
+      <div style={{ padding:'2rem' }}>
+        <HipsterButton>Click Me</HipsterButton>
+        <HipsterButton as='a' href='https://www.udemy.com'>Click Me</HipsterButton>
+        <HipsterButton>Click Me</HipsterButton>
+        <div css={`color: green`}>
+          <h2>Inline CSS</h2>
+        </div>
+      </div>
   );
 }
 
-export default App;
+// jZmMCy
 
-// Place the below between main div tags
-// <BasicTitle>My Styled Component for Basic Title</BasicTitle>
-// <BasicTitle special>Special Component</BasicTitle>
-// <DefaultButton>Styled Component Button</DefaultButton>
-// <HipsterButton>Hipster Button</HipsterButton>
-// <DangerButton>DANGER !!!</DangerButton>
-// <h2>extend material ui button</h2>
-// <Button color="primary" variant="contained">Hello World</Button>
+export default App;

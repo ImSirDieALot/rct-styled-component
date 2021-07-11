@@ -34,8 +34,14 @@ export const DangerButton = styled.button`
 // I am passing the above created DefaultButton and changing the properties to achieve a new button.
 
 export const HipsterButton = styled(DefaultButton)`
-  width: 400px;
+  width: 150px;
   background: transparent;
   color: #000;
   border: solid 1px black;
+  padding:1rem;
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
 `
